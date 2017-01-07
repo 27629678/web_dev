@@ -5,6 +5,9 @@ let express = require('express');
 let app = express();
 let server = http.createServer(app);
 
+// set static resources for express
+app.use(express.static('./public'));
+
 app.get('/', function(req, res) {
   fs.readFile('./index.html', 'utf-8', function(err, data) {
     res.end(data);
