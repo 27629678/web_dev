@@ -11,6 +11,14 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/favicon.ico', function(req, res) {
+  console.log('favicon req happend.');
+  fs.readFile('./favicon.ico', 'binary', function(err, data) {
+    res.write(data, 'binary');
+    res.end();
+  });
+});
+
 server.listen(3000, function() {
   console.log('server is running on port: 3000');
 });
