@@ -1,7 +1,12 @@
-(function () {
-  var ddlog = {};
+const LogLevel = {
+  Debug   : 2,
+  Info    : 1,
+  Error   : 0,
+};
 
-  Date.prototype.format = function (fmt) {
+let log_level = LogLevel.Debug;
+
+Date.prototype.format = function (fmt) {
     var o = {
       "M+": this.getMonth() + 1,                 //月份 
       "d+": this.getDate(),                    //日 
@@ -28,17 +33,26 @@
     return date.format('yyyy-MM-dd hh:mm:ss S');
   }
 
-  ddlog.debug = function (message) {
-    console.log(date_string() + ' [D]: ' + message);
+exports.debug = function(...args) {
+  if (log_level < LogLevel.Debug) {
+    return;
   }
 
-  ddlog.info = function (message) {
-    console.info(date_string() + ' [I]: ' + message);
+  console.log(date_string() + '[D]:' + args);
+};
+
+exports.info = function (...args) {
+  if (log_level < LogLevel.Info) {
+    return;
   }
 
-  ddlog.error = function (message) {
-    console.error(date_string() + ' [E]: ' + message);
+  console.info(date_string() + '[I]:' + args);
+};
+
+exports.error = function (...args) {
+  if (log_level < LogLevel.Error) {
+    return;
   }
 
-  module.exports = ddlog;
-})();
+  console.error(date_string() + '[E]:' + args);
+}
