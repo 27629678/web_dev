@@ -2,10 +2,21 @@ let http  = require('http');
 let fs = require('fs');
 let express = require('express');
 
+let HotFix = require('./db/hotfix');
 let mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/web_dev');
 mongoose.connection.on('connected', function() {
     console.log('mongo db connected.');
+
+    HotFix.findAll(function(err, items) {
+      if(err) {
+        return console.log(err);
+      }
+
+      items.map(function(item) {
+        console.log(item.fileName());
+      });
+    });
 });
 
 mongoose.connection.on('error', function(err) {
@@ -24,8 +35,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 let ddlog = require('./utils/ddlog');
 let upload = require('./utils/upload');
-
-let HotFix = require('./db/hotfix');
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
