@@ -124,6 +124,7 @@
 					DA1EC6781E2CDB0A0081C621 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 3LH7676BHR;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -335,10 +336,11 @@
 			baseConfigurationReference = DA793BD693FAE9F51DA1BA51 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xy.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hzyuxiaohua.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -349,10 +351,11 @@
 			baseConfigurationReference = CD13BDD5ED6C5DDFE8756E99 /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3LH7676BHR;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xy.Demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hzyuxiaohua.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -377,6 +380,7 @@
 				DA1EC68D1E2CDB0A0081C621 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
