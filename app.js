@@ -1,6 +1,8 @@
 let http  = require('http');
 let fs = require('fs');
+let path = require('path');
 let express = require('express');
+var favicon = require('serve-favicon');
 
 let HotFix = require('./db/hotfix');
 let mongoose = require('mongoose');
@@ -46,13 +48,8 @@ app.get('/', function(req, res) {
   res.render('index.ejs');
 });
 
-app.get('/favicon.ico', function(req, res) {
-  ddlog.debug('favicon req happend.');
-  fs.readFile('./favicon.ico', 'binary', function(err, data) {
-    res.write(data, 'binary');
-    res.end();
-  });
-});
+// display favicon at front of page title
+app.use(favicon(path.join(__dirname, '/public/favicon.ico')));
 
 app.post('/upload-image', upload.hotfix.single('image'), function(req, res) {
   let hotfix = new HotFix();
