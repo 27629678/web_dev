@@ -5,34 +5,13 @@ let express = require('express');
 var favicon = require('serve-favicon');
 
 let HotFix = require('./db/hotfix');
-let mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/web_dev');
-mongoose.connection.on('connected', function() {
-    console.log('mongo db connected.');
-
-    HotFix.findAll(function(err, items) {
-      if(err) {
-        return console.log(err);
-      }
-
-      items.map(function(item) {
-        console.log(item.fileName());
-      });
-    });
-});
-
-mongoose.connection.on('error', function(err) {
-    console.log('mongo db connect failed with error: ' + err + '.');
-});
-
-mongoose.connection.on('disconnected', function() {
-    console.log('mongo db disconnected.');
-});
 
 let app = express();
 let server = http.createServer(app);
 
-let bodyParser = require('body-parser'); 
+require('./db/mongodb').start();
+
+let bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 let ddlog = require('./utils/ddlog');
