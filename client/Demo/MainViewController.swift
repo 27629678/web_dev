@@ -40,5 +40,17 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let path = Bundle.main.path(forResource: "/data/websocket", ofType: "zip")
+        WebSocketClient.client.uploadFile(withPath: path!) { (res, err) in
+            guard err == nil else {
+                print("raise err: \(err as? NSError)")
+                return
+            }
+            
+            print("res: \(res)")
+        }
+    }
 }
 

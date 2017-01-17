@@ -15,6 +15,7 @@
 		DAE717611E2DABDA00CAED26 /* WSUploadFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE717601E2DABDA00CAED26 /* WSUploadFileViewController.swift */; };
 		DAE717631E2DAC0300CAED26 /* WSUploadFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE717621E2DAC0300CAED26 /* WSUploadFileViewController.xib */; };
 		DAE717651E2DAD0600CAED26 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE717641E2DAD0600CAED26 /* WebSocketClient.swift */; };
+		DAE717871E2DFE4000CAED26 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = DAE717861E2DFE4000CAED26 /* Data */; };
 		E777576FB6D7D35581CB5DBB /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01EC13635FE3BBAD00A974F0 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		DAE717601E2DABDA00CAED26 /* WSUploadFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUploadFileViewController.swift; sourceTree = "<group>"; };
 		DAE717621E2DAC0300CAED26 /* WSUploadFileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSUploadFileViewController.xib; sourceTree = "<group>"; };
 		DAE717641E2DAD0600CAED26 /* WebSocketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		DAE717861E2DFE4000CAED26 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		DA1EC67B1E2CDB0A0081C621 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DAE717861E2DFE4000CAED26 /* Data */,
 				DAE7175F1E2DABA900CAED26 /* websocket */,
 				DA1EC67C1E2CDB0A0081C621 /* AppDelegate.swift */,
 				DA1EC67E1E2CDB0A0081C621 /* MainViewController.swift */,
@@ -171,6 +174,7 @@
 			files = (
 				DA1EC6871E2CDB0A0081C621 /* LaunchScreen.storyboard in Resources */,
 				DAE717631E2DAC0300CAED26 /* WSUploadFileViewController.xib in Resources */,
+				DAE717871E2DFE4000CAED26 /* Data in Resources */,
 				DA1EC6841E2CDB0A0081C621 /* Assets.xcassets in Resources */,
 				DA1EC6821E2CDB0A0081C621 /* Main.storyboard in Resources */,
 			);

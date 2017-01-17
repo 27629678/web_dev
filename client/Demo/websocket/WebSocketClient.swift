@@ -66,4 +66,17 @@ class WebSocketClient {
             print("receive message:\(data)")
         })
     }
+    
+    public func uploadFile(withPath path: String, complete: @escaping (Any, Error?) -> Void) {
+        let content = try! Data(contentsOf: URL(string: "file://" + path)!)
+        
+        if content.count == 0 || socket?.status != .connected {
+            return
+        }
+        
+        let ack = socket?.emitWithAck("bundle", with: ["bundle.zip", content])
+        ack?.timingOut(after: 30, callback: { (res) in
+            print("upload event res \(res)")
+        })
+    }
 }

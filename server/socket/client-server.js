@@ -13,12 +13,18 @@
       client.emit('greeting', { msg: 'hello, ' + client.id }, function (msg) {
         console.log('ack.message:' + msg);
       });
+
+      client.on('bundle', function (name, data, ack) {
+        console.log(data);
+        ack({success: true});
+      });
+
       client.on('data', function (message) {
         console.log('receive message:' + message);
       });
 
       client.on('register', function (name, ack) {
-        console.log(name + 'login successfully.');
+        console.log(name + ' login successfully.');
         ack('ok');
       });
 
