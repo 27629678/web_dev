@@ -10,6 +10,7 @@ let app = express();
 let server = http.createServer(app);
 
 require('./db/mongodb').start();
+require('./socket/client-server').createServer(server);
 
 let bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));

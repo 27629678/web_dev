@@ -14,6 +14,7 @@
 		DA1EC6871E2CDB0A0081C621 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA1EC6851E2CDB0A0081C621 /* LaunchScreen.storyboard */; };
 		DAE717611E2DABDA00CAED26 /* WSUploadFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE717601E2DABDA00CAED26 /* WSUploadFileViewController.swift */; };
 		DAE717631E2DAC0300CAED26 /* WSUploadFileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAE717621E2DAC0300CAED26 /* WSUploadFileViewController.xib */; };
+		DAE717651E2DAD0600CAED26 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE717641E2DAD0600CAED26 /* WebSocketClient.swift */; };
 		E777576FB6D7D35581CB5DBB /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01EC13635FE3BBAD00A974F0 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		DA793BD693FAE9F51DA1BA51 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		DAE717601E2DABDA00CAED26 /* WSUploadFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUploadFileViewController.swift; sourceTree = "<group>"; };
 		DAE717621E2DAC0300CAED26 /* WSUploadFileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSUploadFileViewController.xib; sourceTree = "<group>"; };
+		DAE717641E2DAD0600CAED26 /* WebSocketClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				DAE717601E2DABDA00CAED26 /* WSUploadFileViewController.swift */,
 				DAE717621E2DAC0300CAED26 /* WSUploadFileViewController.xib */,
+				DAE717641E2DAD0600CAED26 /* WebSocketClient.swift */,
 			);
 			path = websocket;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				DA1EC67F1E2CDB0A0081C621 /* MainViewController.swift in Sources */,
 				DA1EC67D1E2CDB0A0081C621 /* AppDelegate.swift in Sources */,
 				DAE717611E2DABDA00CAED26 /* WSUploadFileViewController.swift in Sources */,
+				DAE717651E2DAD0600CAED26 /* WebSocketClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

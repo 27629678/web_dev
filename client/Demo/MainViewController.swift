@@ -21,6 +21,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableview.delegate = self
         tableview.dataSource = self
         tableview.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        _ = WebSocketClient.client.connect(url: "http://localhost:3000");
     }
 
     // MARK: - table view delegate and data source methods
